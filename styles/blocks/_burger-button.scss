@@ -1,0 +1,32 @@
+@use "../helpers/" as *;
+
+.burger-button {
+  --mainLineColorOnHover: var(--color-grey-30);
+
+  display: flex;
+  align-items: center;
+  column-gap: rem(16);
+  font-weight: 900;
+
+  @include hover {
+    color: var(--color-accent);
+    --mainLineColorOnHover: var(--color-accent);
+  }
+
+  &__lines {
+    display: grid;
+    row-gap: rem(4);
+    width: rem(18);
+    height: rem(14);
+  }
+
+  &__line {
+    color: inherit;
+    background-color: var(--mainLineColorOnHover);
+    transition: background-color var(--transition-duration) linear;
+
+    &--small {
+      width: rem(12);
+    }
+  }
+}

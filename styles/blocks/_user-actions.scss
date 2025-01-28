@@ -1,0 +1,19 @@
+@use "../helpers/" as *;
+
+.user-actions {
+  &__inner {
+    display: flex;
+    column-gap: rem(10);
+    align-items: center;
+    color: var(--color-grey-85);
+    padding-block: rem(10);
+
+    @include hover {
+      color: var(--color-accent);
+
+      svg * {
+        fill: var(--color-accent);
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use "../helpers/" as *;
+
+.header {
+  font-size: rem(14);
+
+  &__top {
+    display: grid;
+    grid-template-columns: rem(114) auto rem(292);
+    align-items: center;
+    border-bottom: var(--border);
+  }
+
+  &__burger-button {
+    padding-block: rem(10);
+    padding-right: rem(25);
+  }
+
+  &__actions {
+    margin-left: rem(1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: rem(25);
+    height: 100%;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+  }
+
+  &__bottom {
+    background-color: var(--color-grey-100);
+    padding-block: rem(18);
+  }
+}

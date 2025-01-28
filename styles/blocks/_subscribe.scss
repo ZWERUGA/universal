@@ -1,0 +1,31 @@
+@use "../helpers/" as *;
+
+.subscribe {
+  --colorTitleOnHover: var(--color-grey-100);
+  --colorPriceOnHover: var(--color-grey-50);
+
+  padding-top: rem(7);
+
+  @include hover {
+    --colorTitleOnHover: var(--color-accent);
+    --colorPriceOnHover: var(--color-accent);
+  }
+
+  &__inner {
+    display: flex;
+    column-gap: rem(10);
+    align-items: center;
+    font-size: rem(12);
+  }
+
+  &__title {
+    color: var(--colorTitleOnHover);
+    font-weight: 900;
+    transition: color var(--transition-duration) linear;
+  }
+
+  &__price {
+    color: var(--colorPriceOnHover);
+    transition: color var(--transition-duration) linear;
+  }
+}
