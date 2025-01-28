@@ -1,0 +1,13 @@
+@use "../helpers/" as *;
+
+body {
+  font-family: var(--font-family-base);
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
