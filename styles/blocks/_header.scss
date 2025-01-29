@@ -25,12 +25,72 @@
   }
 
   &__body {
+    padding-left: rem(28);
+    min-height: rem(84);
     display: flex;
     align-items: center;
+    justify-content: space-between;
+  }
+
+  &__hot {
+    display: flex;
+    align-items: center;
+
+    &-text {
+      margin-left: rem(15);
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    column-gap: rem(67);
+  }
+
+  &__temperature {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
   }
 
   &__bottom {
+    position: relative;
     background-color: var(--color-grey-100);
     padding-block: rem(18);
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: calc((100vw - var(--container-width)) / 2);
+    }
+
+    &::before {
+      left: calc(((100vw - var(--container-width)) / 2) * -1);
+      background-color: var(--color-grey-100);
+    }
+
+    &::after {
+      right: calc(((100vw - var(--container-width)) / 2) * -1);
+      background-color: var(--color-grey-100);
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-weight: 900;
+
+    @include hover {
+      color: var(--color-accent);
+    }
   }
 }
