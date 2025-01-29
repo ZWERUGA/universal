@@ -1,0 +1,41 @@
+@use "../helpers/" as *;
+
+.button {
+  --rightArrowValue: #{rem(20)};
+  --arrowColor: var(--color-white);
+
+  position: relative;
+  padding-block: rem(10);
+  padding-inline: rem(29);
+  color: var(--color-white);
+  background-color: var(--color-accent);
+  border-radius: rem(20);
+  font-size: rem(14);
+  font-weight: 900;
+  line-height: 1.43;
+
+  @include hover {
+    --rightArrowValue: #{rem(15)};
+    --arrowColor: var(--color-accent);
+
+    background-color: var(--color-white);
+    color: var(--color-accent);
+  }
+
+  &--arrow {
+    padding-left: rem(25);
+    padding-right: rem(45);
+
+    &::after {
+      @include abs-y;
+
+      content: "";
+      mask: url("../../images/icons/arrow-thin-arrow-white.svg") no-repeat center;
+      background-color: var(--arrowColor);
+      height: rem(7);
+      width: rem(15);
+      right: var(--rightArrowValue);
+      transition-duration: var(--transition-duration);
+    }
+  }
+}

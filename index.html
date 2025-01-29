@@ -79,14 +79,16 @@
             />
             <div class="header__hot-text">Boston and New York Bear Brunt</div>
           </div>
-          <img
-            src="./images/header/logo.svg"
-            alt=""
-            class="header__logo logo"
-            width="184"
-            height="31"
-            loading="lazy"
-          />
+          <a href="#" class="header__logo logo">
+            <img
+              src="./images/header/logo.svg"
+              alt=""
+              class="logo__img"
+              width="184"
+              height="31"
+              loading="lazy"
+            />
+          </a>
           <div class="header__info">
             <div class="header__date">
               Monday, <time datetime="01-01-2025">January 1, 2018</time>
@@ -104,45 +106,8 @@
             </div>
           </div>
         </div>
-        <div class="header__bottom">
-          <ul class="header__list">
-            <li class="header__item">
-              <a href="#" class="header__link">News</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">Opinion</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">Science</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">Life</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">Travel</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">Moneys</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">Art & Design</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">Sports</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">People</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">Health</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">Education</a>
-            </li>
-          </ul>
-        </div>
       </div>
-      <!-- <div class="header__bottom">
+      <div class="header__bottom">
         <ul class="header__list container">
           <li class="header__item">
             <a href="#" class="header__link">News</a>
@@ -178,7 +143,164 @@
             <a href="#" class="header__link">Education</a>
           </li>
         </ul>
-      </div> -->
+      </div>
     </header>
+
+    <main class="content">
+      <section class="news">
+        <div class="news__inner container">
+          <div class="news__latest">
+            <ul class="news__latest-list">
+              <li class="news__latest-item">
+                <a href="#" class="news__latest-link">
+                  <div class="news__latest-link__title">
+                    25 Songs That Tell Us Where Music Is Going
+                  </div>
+                  <img
+                    src="./images/news/1.png"
+                    alt=""
+                    class="news__latest-link__img"
+                    width="65"
+                    height="65"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <li class="news__latest-item">
+                <a href="#" class="news__latest-link">
+                  <div class="news__latest-link__title">
+                    These Ancient Assassins Eat Their Own Kind
+                  </div>
+                  <img
+                    src="./images/news/2.png"
+                    alt=""
+                    class="news__latest-link__img"
+                    width="65"
+                    height="65"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <li class="news__latest-item">
+                <a href="#" class="news__latest-link">
+                  <div class="news__latest-link__title">
+                    How Do You Teach People to Love Difficult Music?
+                  </div>
+                  <img
+                    src="./images/news/3.png"
+                    alt=""
+                    class="news__latest-link__img"
+                    width="65"
+                    height="65"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <li class="news__latest-item">
+                <a href="#" class="news__latest-link">
+                  <div class="news__latest-link__title">International Soccer’s Man of Mystery</div>
+                  <img
+                    src="./images/news/4.png"
+                    alt=""
+                    class="news__latest-link__img"
+                    width="65"
+                    height="65"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="news__recommended">
+            <div class="news__recommended-content">
+              <video
+                class="news__recommended-video"
+                src="./videos/sample-video.mp4"
+                poster="./images/posters/1.jpg"
+              ></video>
+              <div class="news__recommended-video__overlay video-overlay">
+                <div class="video-overlay__author">
+                  <img
+                    src="./images/news/author.png"
+                    alt=""
+                    class="video-overlay__author-img"
+                    width="45"
+                    height="45"
+                    loading="lazy"
+                  />
+                  <div class="video-overlay__author-info">
+                    <div class="video-overlay__author-name">By Benjamin Turner</div>
+                    <div class="video-overlay__author-work">Traveler</div>
+                  </div>
+                </div>
+                <div class="video-overlay__category video-overlay__category--accent">
+                  Destinations
+                </div>
+                <h1 class="video-overlay__title">In Southeast England, White Cliffs and Fish</h1>
+                <div class="video-overlay__controls">
+                  <a href="#" class="video-overlay__link button button--arrow">Read more</a>
+                  <button class="video-overlay__controls-play-video">
+                    <svg
+                      width="50"
+                      height="50"
+                      viewBox="0 0 50 50"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M20.4999 30.9231V19.0759C20.4999 18.6195 20.8829 18.2495 21.3554 18.2495C21.5194 18.2495 21.68 18.2951 21.818 18.3808L31.357 24.3043C31.7544 24.5511 31.8695 25.0624 31.614 25.4463C31.5477 25.5459 31.4601 25.6306 31.357 25.6946L21.818 31.6182C21.4206 31.865 20.8913 31.7538 20.6358 31.3699C20.5471 31.2366 20.4999 31.0815 20.4999 30.9231Z"
+                        fill="white"
+                      />
+                    </svg>
+
+                    <div class="video-overlay__controls-info">
+                      <div class="video-overlay__controls-title">
+                        The chalk cliff of Beachy Head
+                      </div>
+                      <div class="video-overlay__controls-duration">18:05</div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="news__recommended-tabs tabs">
+              <div class="tabs__title">Recommended for you</div>
+              <div class="tabs__buttons">
+                <button class="tabs__button">
+                  <div class="tabs__button-category tabs__button-category--blue-green">Food</div>
+                  <div class="tabs__button-title tabs__button-title--has-video">
+                    For Chicken-Fried Steak, Too Much Is Just Enough
+                  </div>
+                </button>
+                <button class="tabs__button">
+                  <div class="tabs__button-category tabs__button-category--grey-blue-75">Cars</div>
+                  <div class="tabs__button-title">Storm Has Car Dealers Doing Swift Business</div>
+                </button>
+                <button class="tabs__button">
+                  <div class="tabs__button-category tabs__button-category--purple">Movies</div>
+                  <div class="tabs__button-title">
+                    War Is Hell? In New Military Dramas, It’s One-Dimensional
+                  </div>
+                </button>
+                <button class="tabs__button">
+                  <div class="tabs__button-category tabs__button-category--orange">NFL</div>
+                  <div class="tabs__button-title tabs__button-title--has-video">
+                    11 surprising stat rankings for active NFL players
+                  </div>
+                </button>
+                <button class="tabs__button">
+                  <div class="tabs__button-category tabs__button-category--green">Tech Reviews</div>
+                  <div class="tabs__button-title">
+                    The bookcases you can buy online and assemble yourself
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

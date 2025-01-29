@@ -1,13 +1,18 @@
+@use "../helpers" as *;
+
 :root {
   --color-white: #ffffff;
   --color-grey-100: #262d33;
+  --color-grey-95: #30363d;
   --color-grey-85: #4b5157;
   --color-grey-50: #939699;
   --color-grey-30: #bcbfc2;
   --color-grey-15: #d9dadb;
   --color-accent: #4592ff;
 
-  --color-grey-blue-75: #55839e;
+  --color-bg-white: #EDEFF0;
+
+  --color-grey-blue-100: #55839e;
   --color-grey-blue-75: #6e99ae;
   --color-grey-blue-50: #b4d1e0;
   --color-grey-blue-25: #d1e2eb;
@@ -21,6 +26,7 @@
   --color-red-bookmark: #eb5757;
 
   --border: 1px solid var(--color-grey-15);
+  --border-radius: #{rem(10)};
 
   --font-family-base: "Lato", sans-serif;
   --font-family-accent: "Roboto Slab", sans-serif;

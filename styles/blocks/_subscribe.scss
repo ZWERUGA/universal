@@ -4,7 +4,7 @@
   --colorTitleOnHover: var(--color-grey-100);
   --colorPriceOnHover: var(--color-grey-50);
 
-  padding-top: rem(7);
+  padding-top: var(--paddingTopValue);
 
   @include hover {
     --colorTitleOnHover: var(--color-accent);

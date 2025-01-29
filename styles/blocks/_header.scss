@@ -1,6 +1,8 @@
 @use "../helpers/" as *;
 
 .header {
+  --paddingTopValue: #{rem(7)};
+
   font-size: rem(14);
 
   &__top {
@@ -11,8 +13,19 @@
   }
 
   &__burger-button {
+    position: relative;
     padding-block: rem(10);
     padding-right: rem(25);
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      right: 0;
+      height: calc(100% + var(--paddingTopValue) * 2);
+      width: rem(1);
+      border-right: var(--border);
+    }
   }
 
   &__actions {
@@ -57,26 +70,6 @@
     position: relative;
     background-color: var(--color-grey-100);
     padding-block: rem(18);
-
-    &::before,
-    &::after {
-      content: "";
-
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: calc((100vw - var(--container-width)) / 2);
-    }
-
-    &::before {
-      left: calc(((100vw - var(--container-width)) / 2) * -1);
-      background-color: var(--color-grey-100);
-    }
-
-    &::after {
-      right: calc(((100vw - var(--container-width)) / 2) * -1);
-      background-color: var(--color-grey-100);
-    }
   }
 
   &__list {
@@ -85,12 +78,22 @@
   }
 
   &__link {
+    position: relative;
     color: var(--color-white);
     text-transform: uppercase;
     font-weight: 900;
 
     @include hover {
       color: var(--color-accent);
+    }
+
+    &::before {
+      @include abs-center;
+
+      content: '';
+
+      width: 100%;
+      height: 200%;
     }
   }
 }
