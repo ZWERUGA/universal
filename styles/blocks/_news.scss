@@ -3,7 +3,11 @@
 .news {
   padding-top: rem(30);
   padding-bottom: rem(15);
-  background: linear-gradient(to bottom, var(--color-grey-100) rem(475), var(--color-bg-white) rem(285));
+  background: linear-gradient(
+    to bottom,
+    var(--color-grey-100) rem(475),
+    var(--color-bg-white) rem(285)
+  );
 
   &__latest {
     padding-top: rem(25);
@@ -49,15 +53,26 @@
     display: grid;
     grid-template-columns: auto rem(263);
     grid-template-rows: rem(570);
+    border-radius: var(--border-radius);
+    overflow: hidden;
 
-    &-content {
+    &-slides {
+      overflow: hidden;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+
+    &-slide {
       position: relative;
+      width: 877px;
+      height: 570px;
+      scroll-snap-align: start;
     }
 
     &-video {
       display: flex;
-      border-top-left-radius: var(--border-radius);
-      border-bottom-left-radius: var(--border-radius);
+      object-fit: cover;
+      filter: blur(5px);
     }
 
     &-video__overlay {
@@ -68,8 +83,6 @@
 
     &-tabs {
       background-color: var(--color-white);
-      border-top-right-radius: var(--border-radius);
-      border-bottom-right-radius: var(--border-radius);
     }
   }
 }

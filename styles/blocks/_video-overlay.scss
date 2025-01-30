@@ -36,10 +36,12 @@
   }
 
   &__category {
+    display: inline-flex;
     margin-top: rem(145);
-    font-size: rem(12);
+    font-size: rem(14);
     font-weight: 900;
     text-transform: uppercase;
+    text-shadow: 0 0 50px var(--color-grey-100);
 
     &--accent {
       color: var(--color-accent);

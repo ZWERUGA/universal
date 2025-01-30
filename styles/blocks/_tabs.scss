@@ -20,15 +20,20 @@
   }
 
   &__button {
+    --colorOnHover: var(--color-white);
+
+    position: relative;
     padding-top: rem(17);
     padding-bottom: rem(19);
     padding-inline: rem(25);
-    display: grid;
+    display: flex;
+    flex-direction: column;
     row-gap: rem(8);
     text-align: left;
+    background-color: var(--colorOnHover);
 
     @include hover {
-      background-color: var(--color-grey-blue-25);
+      --colorOnHover: var(--color-grey-15);
     }
 
     &:not(:last-child) {
@@ -37,7 +42,24 @@
 
     &:last-child {
       height: 100%;
-      border-bottom-right-radius: rem(10);
+    }
+
+    &--is-active {
+      pointer-events: none;
+      background-color: var(--color-bg-grey-light);
+
+      &::before {
+        content: "";
+
+        @include abs-y;
+        background-color: var(--colorOnHover);
+        width: 12px;
+        height: 20px;
+        left: rem(-11);
+        clip-path: polygon(0 50%, 100% 100%, 100% 0);
+        background-color: var(--color-bg-grey-light);
+        transition-duration: var(--transition-duration);
+      }
     }
 
     &-category {
