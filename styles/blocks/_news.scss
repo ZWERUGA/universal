@@ -67,6 +67,7 @@
       width: 877px;
       height: 570px;
       scroll-snap-align: start;
+      background-color: var(--color-grey-100);
     }
 
     &-video {
@@ -81,11 +82,11 @@
       }
     }
 
-    &-video__overlay {
-      position: absolute;
-      inset: 0;
-      background-color: rgba(64, 48, 61, 0.35);
-    }
+    // &-video__overlay {
+    //   position: absolute;
+    //   inset: 0;
+    //   background-color: rgba(64, 48, 61, 0.35);
+    // }
 
     &-tabs {
       background-color: var(--color-white);

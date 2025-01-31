@@ -1,5 +1,10 @@
 @use "../helpers/" as *;
 
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
 * {
   outline-color: var(--color-accent);
   scrollbar-width: thin;

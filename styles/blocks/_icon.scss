@@ -1,0 +1,54 @@
+@use "../helpers/" as *;
+
+.icon {
+  --iconCommentColor: var(--color-grey-30);
+  --iconHeartColor: var(--color-grey-30);
+  --iconTextColor: var(--color-grey-50);
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  column-gap: rem(5);
+  font-size: rem(12);
+  color: var(--iconTextColor);
+  cursor: pointer;
+  transition-duration: var(--transition-duration);
+
+  @include hover {
+    --iconCommentColor: var(--color-accent);
+    --iconHeartColor: var(--color-red);
+  }
+
+  &::before {
+    @include abs-x;
+
+    content: "";
+    width: 120%;
+    height: 180%;
+  }
+
+  svg {
+    padding-top: rem(1);
+  }
+
+  &--comment {
+    --iconTextColor: var(--iconCommentColor);
+
+    svg {
+      path {
+        fill: var(--iconCommentColor);
+      }
+    }
+  }
+
+  &--heart {
+    --iconTextColor: var(--iconHeartColor);
+
+    svg {
+      path {
+        fill: var(--iconHeartColor);
+      }
+    }
+  }
+}

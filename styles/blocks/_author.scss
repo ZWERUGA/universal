@@ -1,0 +1,39 @@
+@use "../helpers/" as *;
+
+.author {
+  --textColor: var(--color-white);
+
+  display: flex;
+  align-items: center;
+  column-gap: rem(10);
+
+  @include hover {
+    --textColor: var(--color-grey-blue-25);
+  }
+
+  &__img {
+    border-radius: 50%;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &__info {
+    display: grid;
+    row-gap: rem(2);
+  }
+
+  &__name {
+    color: var(--textColor);
+    font-size: rem(14);
+    opacity: 0.85;
+    line-height: 1.43;
+    transition-duration: var(--transition-duration);
+  }
+
+  &__work {
+    color: var(--textColor);
+    font-size: rem(12);
+    opacity: 0.4;
+    line-height: 1.25;
+    transition-duration: var(--transition-duration);
+  }
+}

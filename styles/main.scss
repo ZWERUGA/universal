@@ -1,12 +1,16 @@
 @use "base" as *;
 
 // BLOCKS
+@use "./blocks/icon";
+@use "./blocks/author";
 @use "./blocks/button";
+@use "./blocks/category";
 @use "./blocks/header";
 @use "./blocks/burger-button";
 @use "./blocks/form";
 @use "./blocks/subscribe";
 @use "./blocks/user-actions";
 @use "./blocks/news";
-@use "./blocks/video-overlay";
+@use "./blocks/overlay";
 @use "./blocks/tabs";
+@use "./blocks/articles";

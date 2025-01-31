@@ -62,34 +62,6 @@
       }
     }
 
-    &-category {
-      font-size: rem(12);
-      font-weight: 900;
-      text-transform: uppercase;
-      line-height: 1.25;
-      letter-spacing: 0.04em;
-
-      &--blue-green {
-        color: var(--color-blue-green);
-      }
-
-      &--grey-blue-75 {
-        color: var(--color-grey-blue-75);
-      }
-
-      &--purple {
-        color: var(--color-purple);
-      }
-
-      &--orange {
-        color: var(--color-orange);
-      }
-
-      &--green {
-        color: var(--color-green);
-      }
-    }
-
     &-title {
       position: relative;
       font-size: rem(14);
