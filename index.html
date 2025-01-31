@@ -213,16 +213,17 @@
             </ul>
           </div>
           <div class="news__recommended">
-            <div class="news__recommended-slides">
-              <div class="news__recommended-slide" id="slide-1">
+            <div class="news__recommended-slides" data-js-videos>
+              <div class="news__recommended-slide" id="slide-1" data-js-videos-slide>
                 <video
                   class="news__recommended-video"
                   src="./videos/sample-video.mp4"
                   poster="./images/posters/1.jpg"
                   width="877"
                   height="570"
+                  data-js-videos-video
                 ></video>
-                <div class="news__recommended-video__overlay video-overlay">
+                <div class="news__recommended-video__overlay video-overlay" data-js-videos-overlay>
                   <div class="video-overlay__author">
                     <img
                       src="./images/news/author.png"
@@ -237,13 +238,13 @@
                       <div class="video-overlay__author-work">Traveler</div>
                     </div>
                   </div>
-                  <div class="video-overlay__category video-overlay__category--accent">
-                    Destinations
-                  </div>
-                  <h1 class="video-overlay__title">In Southeast England, White Cliffs and Fish</h1>
+                  <div class="video-overlay__category">Food</div>
+                  <h1 class="video-overlay__title">
+                    For Chicken-Fried Steak, Too Much Is Just Enough
+                  </h1>
                   <div class="video-overlay__controls">
                     <a href="#" class="video-overlay__link button button--arrow">Read more</a>
-                    <button class="video-overlay__controls-play-video">
+                    <button class="video-overlay__controls-play-video" data-js-videos-button>
                       <svg
                         width="50"
                         height="50"
@@ -270,15 +271,15 @@
                 </div>
               </div>
               <div class="news__recommended-slide" id="slide-2">
-                <video
+                <img
                   class="news__recommended-video"
-                  src="./videos/sample-video.mp4"
-                  poster="./images/posters/2.jpg"
-                  loading="lazy"
+                  src="./images/posters/2.jpg"
+                  alt=""
                   width="877"
                   height="570"
-                ></video>
-                <div class="news__recommended-video__overlay video-overlay">
+                  loading="lazy"
+                />
+                <div class="news__recommended-video__overlay video-overlay" data-js-videos-overlay>
                   <div class="video-overlay__author">
                     <img
                       src="./images/news/author.png"
@@ -293,47 +294,23 @@
                       <div class="video-overlay__author-work">Traveler</div>
                     </div>
                   </div>
-                  <div class="video-overlay__category video-overlay__category--accent">
-                    Destinations
-                  </div>
-                  <h1 class="video-overlay__title">In Southeast England, White Cliffs and Fish</h1>
+                  <div class="video-overlay__category">Cars</div>
+                  <h1 class="video-overlay__title">Storm Has Car Dealers Doing Swift Business</h1>
                   <div class="video-overlay__controls">
                     <a href="#" class="video-overlay__link button button--arrow">Read more</a>
-                    <button class="video-overlay__controls-play-video">
-                      <svg
-                        width="50"
-                        height="50"
-                        viewBox="0 0 50 50"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M20.4999 30.9231V19.0759C20.4999 18.6195 20.8829 18.2495 21.3554 18.2495C21.5194 18.2495 21.68 18.2951 21.818 18.3808L31.357 24.3043C31.7544 24.5511 31.8695 25.0624 31.614 25.4463C31.5477 25.5459 31.4601 25.6306 31.357 25.6946L21.818 31.6182C21.4206 31.865 20.8913 31.7538 20.6358 31.3699C20.5471 31.2366 20.4999 31.0815 20.4999 30.9231Z"
-                          fill="white"
-                        />
-                      </svg>
-
-                      <div class="video-overlay__controls-info">
-                        <div class="video-overlay__controls-title">
-                          The chalk cliff of Beachy Head
-                        </div>
-                        <div class="video-overlay__controls-duration">18:05</div>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>
               <div class="news__recommended-slide" id="slide-3">
-                <video
+                <img
                   class="news__recommended-video"
-                  src="./videos/sample-video.mp4"
-                  poster="./images/posters/3.jpg"
+                  src="./images/posters/3.jpg"
+                  alt=""
                   width="877"
                   height="570"
-                ></video>
-                <div class="news__recommended-video__overlay video-overlay">
+                  loading="lazy"
+                />
+                <div class="news__recommended-video__overlay video-overlay" data-js-videos-overlay>
                   <div class="video-overlay__author">
                     <img
                       src="./images/news/author.png"
@@ -348,47 +325,25 @@
                       <div class="video-overlay__author-work">Traveler</div>
                     </div>
                   </div>
-                  <div class="video-overlay__category video-overlay__category--accent">
-                    Destinations
-                  </div>
-                  <h1 class="video-overlay__title">In Southeast England, White Cliffs and Fish</h1>
+                  <div class="video-overlay__category">Movies</div>
+                  <h1 class="video-overlay__title">
+                    War Is Hell? In New Military Dramas, It’s One-Dimensional
+                  </h1>
                   <div class="video-overlay__controls">
                     <a href="#" class="video-overlay__link button button--arrow">Read more</a>
-                    <button class="video-overlay__controls-play-video">
-                      <svg
-                        width="50"
-                        height="50"
-                        viewBox="0 0 50 50"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M20.4999 30.9231V19.0759C20.4999 18.6195 20.8829 18.2495 21.3554 18.2495C21.5194 18.2495 21.68 18.2951 21.818 18.3808L31.357 24.3043C31.7544 24.5511 31.8695 25.0624 31.614 25.4463C31.5477 25.5459 31.4601 25.6306 31.357 25.6946L21.818 31.6182C21.4206 31.865 20.8913 31.7538 20.6358 31.3699C20.5471 31.2366 20.4999 31.0815 20.4999 30.9231Z"
-                          fill="white"
-                        />
-                      </svg>
-
-                      <div class="video-overlay__controls-info">
-                        <div class="video-overlay__controls-title">
-                          The chalk cliff of Beachy Head
-                        </div>
-                        <div class="video-overlay__controls-duration">18:05</div>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>
-              <div class="news__recommended-slide" id="slide-4">
+              <div class="news__recommended-slide" id="slide-4" data-js-videos-slide>
                 <video
                   class="news__recommended-video"
                   src="./videos/sample-video.mp4"
                   poster="./images/posters/4.jpg"
                   width="877"
                   height="570"
+                  data-js-videos-video
                 ></video>
-                <div class="news__recommended-video__overlay video-overlay">
+                <div class="news__recommended-video__overlay video-overlay" data-js-videos-overlay>
                   <div class="video-overlay__author">
                     <img
                       src="./images/news/author.png"
@@ -403,13 +358,13 @@
                       <div class="video-overlay__author-work">Traveler</div>
                     </div>
                   </div>
-                  <div class="video-overlay__category video-overlay__category--accent">
-                    Destinations
-                  </div>
-                  <h1 class="video-overlay__title">In Southeast England, White Cliffs and Fish</h1>
+                  <div class="video-overlay__category">NFL</div>
+                  <h1 class="video-overlay__title">
+                    11 surprising stat rankings for active NFL players
+                  </h1>
                   <div class="video-overlay__controls">
                     <a href="#" class="video-overlay__link button button--arrow">Read more</a>
-                    <button class="video-overlay__controls-play-video">
+                    <button class="video-overlay__controls-play-video" data-js-videos-button>
                       <svg
                         width="50"
                         height="50"
@@ -436,14 +391,15 @@
                 </div>
               </div>
               <div class="news__recommended-slide" id="slide-5">
-                <video
+                <img
                   class="news__recommended-video"
-                  src="./videos/sample-video.mp4"
-                  poster="./images/posters/5.jpg"
+                  src="./images/posters/2.jpg"
+                  alt=""
                   width="877"
                   height="570"
-                ></video>
-                <div class="news__recommended-video__overlay video-overlay">
+                  loading="lazy"
+                />
+                <div class="news__recommended-video__overlay video-overlay" data-js-videos-overlay>
                   <div class="video-overlay__author">
                     <img
                       src="./images/news/author.png"
@@ -458,35 +414,12 @@
                       <div class="video-overlay__author-work">Traveler</div>
                     </div>
                   </div>
-                  <div class="video-overlay__category video-overlay__category--accent">
-                    Destinations
-                  </div>
-                  <h1 class="video-overlay__title">In Southeast England, White Cliffs and Fish</h1>
+                  <div class="video-overlay__category">Reviews</div>
+                  <h1 class="video-overlay__title">
+                    The bookcases you can buy online and assemble yourself
+                  </h1>
                   <div class="video-overlay__controls">
                     <a href="#" class="video-overlay__link button button--arrow">Read more</a>
-                    <button class="video-overlay__controls-play-video">
-                      <svg
-                        width="50"
-                        height="50"
-                        viewBox="0 0 50 50"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M20.4999 30.9231V19.0759C20.4999 18.6195 20.8829 18.2495 21.3554 18.2495C21.5194 18.2495 21.68 18.2951 21.818 18.3808L31.357 24.3043C31.7544 24.5511 31.8695 25.0624 31.614 25.4463C31.5477 25.5459 31.4601 25.6306 31.357 25.6946L21.818 31.6182C21.4206 31.865 20.8913 31.7538 20.6358 31.3699C20.5471 31.2366 20.4999 31.0815 20.4999 30.9231Z"
-                          fill="white"
-                        />
-                      </svg>
-
-                      <div class="video-overlay__controls-info">
-                        <div class="video-overlay__controls-title">
-                          The chalk cliff of Beachy Head
-                        </div>
-                        <div class="video-overlay__controls-duration">18:05</div>
-                      </div>
-                    </button>
                   </div>
                 </div>
               </div>

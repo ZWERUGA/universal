@@ -4,6 +4,14 @@
   padding-top: rem(55);
   padding-bottom: rem(95);
   padding-inline: rem(55);
+  opacity: 1;
+  visibility: visible;
+  transition-duration: 1s;
+
+  &--is-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
 
   &__author {
     display: flex;
@@ -41,11 +49,8 @@
     font-size: rem(14);
     font-weight: 900;
     text-transform: uppercase;
-    text-shadow: 0 0 50px var(--color-grey-100);
-
-    &--accent {
-      color: var(--color-accent);
-    }
+    text-shadow: 0 0 10px var(--color-grey-100);
+    color: var(--color-grey-blue-25);
   }
 
   &__title {
