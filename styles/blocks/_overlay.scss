@@ -4,9 +4,6 @@
   position: absolute;
   inset: 0;
   background-color: rgba(64, 48, 61, 0.35);
-  padding-top: rem(55);
-  padding-bottom: rem(95);
-  padding-inline: rem(55);
   opacity: 1;
   visibility: visible;
   transition-duration: 1s;
@@ -14,6 +11,11 @@
   &--is-hidden {
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
+  }
+
+  &__category {
+    margin-top: rem(145);
   }
 
   &__title {
@@ -24,6 +26,11 @@
     font-weight: 700;
     color: var(--color-white);
     line-height: 1.25;
+  }
+
+  &__link {
+    padding-left: rem(25);
+    padding-right: rem(45);
   }
 
   &__controls {

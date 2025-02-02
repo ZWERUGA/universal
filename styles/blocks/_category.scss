@@ -7,19 +7,13 @@
   line-height: 1.25;
   letter-spacing: 0.04em;
 
-  &--slide {
-    display: inline-flex;
+  &--fsz-14 {
     font-size: rem(14);
+  }
+
+  &--backlight {
     text-shadow: 0 0 10px var(--color-grey-100);
     color: var(--color-grey-blue-25);
-  }
-
-  &--margin-145 {
-    margin-top: rem(145);
-  }
-
-  &--margin-117 {
-    margin-top: rem(117);
   }
 
   &--blue-green {

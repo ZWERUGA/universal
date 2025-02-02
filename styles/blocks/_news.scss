@@ -73,20 +73,19 @@
     &-video {
       display: flex;
       object-fit: cover;
+      transition-duration: 1s;
       filter: blur(5px);
 
-      transition-duration: 1s;
+      &__overlay {
+        padding-top: rem(55);
+        padding-bottom: rem(95);
+        padding-inline: rem(55);
+      }
 
       &--is-playing {
         filter: blur(0);
       }
     }
-
-    // &-video__overlay {
-    //   position: absolute;
-    //   inset: 0;
-    //   background-color: rgba(64, 48, 61, 0.35);
-    // }
 
     &-tabs {
       background-color: var(--color-white);

@@ -1,0 +1,11 @@
+@use "../helpers/" as *;
+
+.card-info {
+  display: flex;
+  column-gap: rem(10);
+
+  &__date {
+    font-size: rem(12);
+    color: var(--color-grey-50);
+  }
+}

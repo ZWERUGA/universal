@@ -10,7 +10,7 @@ class Videos {
   };
 
   stateClasses = {
-    isHidden: "video-overlay--is-hidden",
+    isHidden: "overlay--is-hidden",
     isPlaying: "news__recommended-video--is-playing",
   };
 

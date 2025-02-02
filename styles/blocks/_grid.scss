@@ -1,0 +1,12 @@
+@use "../helpers/" as *;
+
+.grid {
+  display: grid;
+  gap: rem(30);
+
+  &__item {
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    background-color: var(--color-white);
+  }
+}

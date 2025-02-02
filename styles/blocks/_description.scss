@@ -1,0 +1,8 @@
+@use "../helpers/" as *;
+
+.description {
+  font-size: rem(14);
+  line-height: 1.43;
+  color: var(--color-grey-85);
+  transition-duration: var(--transition-duration);
+}

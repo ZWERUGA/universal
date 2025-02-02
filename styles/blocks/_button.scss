@@ -4,9 +4,8 @@
   --rightArrowValue: #{rem(20)};
   --arrowColor: var(--color-white);
 
-  position: relative;
   padding-block: rem(10);
-  padding-inline: rem(29);
+  position: relative;
   color: var(--color-white);
   background-color: var(--color-accent);
   border-radius: rem(20);
@@ -23,9 +22,6 @@
   }
 
   &--arrow {
-    padding-left: rem(25);
-    padding-right: rem(45);
-
     &::after {
       @include abs-y;
 

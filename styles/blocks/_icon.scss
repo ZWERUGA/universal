@@ -5,15 +5,12 @@
   --iconHeartColor: var(--color-grey-30);
   --iconTextColor: var(--color-grey-50);
 
-  position: relative;
   display: flex;
-  align-items: center;
-  justify-self: end;
-  column-gap: rem(5);
+  column-gap: rem(6);
   font-size: rem(12);
   color: var(--iconTextColor);
-  cursor: pointer;
   transition-duration: var(--transition-duration);
+  cursor: pointer;
 
   @include hover {
     --iconCommentColor: var(--color-accent);
@@ -21,34 +18,26 @@
   }
 
   &::before {
-    @include abs-x;
-
     content: "";
-    width: 120%;
-    height: 180%;
-  }
-
-  svg {
-    padding-top: rem(1);
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    width: rem(14);
+    height: rem(14);
+    transition-duration: var(--transition-duration);
   }
 
   &--comment {
-    --iconTextColor: var(--iconCommentColor);
-
-    svg {
-      path {
-        fill: var(--iconCommentColor);
-      }
+    &::before {
+      mask: url("../../images/icons/comment.svg") no-repeat center;
+      background-color: var(--iconCommentColor);
     }
   }
 
   &--heart {
-    --iconTextColor: var(--iconHeartColor);
-
-    svg {
-      path {
-        fill: var(--iconHeartColor);
-      }
+    &::before {
+      mask: url("../../images/icons/heart.svg") no-repeat center;
+      background-color: var(--iconHeartColor);
     }
   }
 }
