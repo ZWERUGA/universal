@@ -1,0 +1,44 @@
+@use "../helpers/" as *;
+
+.banner {
+  position: relative;
+  min-height: rem(270);
+  background-image: url("../../images/banners/flower.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: var(--color-bg-dark);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+    background-color: rgba(64, 48, 61, 0.35);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: rem(25);
+    align-items: center;
+    padding-top: rem(50);
+    padding-bottom: rem(55);
+  }
+
+  &__title {
+    position: relative;
+    font-size: rem(40);
+    font-weight: 700;
+    font-family: var(--font-family-accent);
+    line-height: 1.25;
+    color: var(--color-white);
+    text-align: center;
+    max-width: rem(680);
+  }
+
+  &__link {
+    padding-left: rem(25);
+    padding-right: rem(45);
+  }
+}
