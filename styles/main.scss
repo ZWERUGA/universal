@@ -13,6 +13,7 @@
 @use "./blocks/news";
 @use "./blocks/overlay";
 @use "./blocks/tabs";
+@use "./blocks/sidebar";
 @use "./blocks/articles";
 @use "./blocks/grid";
 @use "./blocks/article-card";
@@ -20,3 +21,5 @@
 @use "./blocks/description";
 @use "./blocks/card-info";
 @use "./blocks/banner";
+@use "./blocks/posts";
+@use "./blocks/post-card";

@@ -1,0 +1,44 @@
+@use "../helpers/" as *;
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    padding-top: rem(20);
+    padding-bottom: rem(19);
+    padding-inline: rem(25);
+    text-transform: uppercase;
+    font-size: rem(14);
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    line-height: 1.43;
+    border-bottom: var(--border);
+  }
+
+  &__list {
+    padding-inline: rem(25);
+  }
+
+  &__item {
+    &:not(:last-child) {
+      border-bottom: var(--border);
+    }
+  }
+
+  &__footer {
+    display: flex;
+    margin-top: auto;
+    border-top: var(--border);
+  }
+
+  &__read-more {
+    padding-top: rem(11);
+    padding-bottom: rem(14);
+    width: 100%;
+    text-align: center;
+    font-size: rem(14);
+    line-height: 1.43;
+    font-weight: 900;
+  }
+}

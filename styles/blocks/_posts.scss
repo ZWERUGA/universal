@@ -1,0 +1,122 @@
+@use "../helpers/" as *;
+
+.posts {
+  background-color: var(--color-bg-white);
+
+  &__inner {
+    padding-block: rem(60);
+    display: grid;
+    grid-template-columns: auto rem(263);
+    column-gap: rem(30);
+  }
+
+  &__main {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+
+    &-list {
+      padding-inline: rem(25);
+    }
+
+    &-item {
+      &:not(:last-child) {
+        border-bottom: var(--border);
+      }
+    }
+  }
+
+  &__recommended {
+    --onHoverPostImageScale: 1;
+    --onHoverPostImageBrightness: 1;
+    --postTitleColorText: var(--color-grey-85);
+    --postTimeColorText: var(--color-grey-50);
+
+    position: sticky;
+    top: rem(60);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    max-height: rem(770);
+
+    &-header {
+      color: var(--color-grey-100);
+    }
+
+    &-list {
+      counter-reset: custom-counter;
+      list-style: none;
+    }
+
+    &-item {
+      padding-block: rem(15);
+      counter-increment: custom-counter;
+
+      @include hover {
+        --onHoverPostCardImageScale: 1.2;
+        --onHoverPostCardImageBrightness: 0.7;
+        --postTitleColorText: var(--color-grey-blue-75);
+        --postTimeColorText: var(--color-grey-blue-75);
+      }
+    }
+
+    &-link {
+      position: relative;
+      display: grid;
+      grid-template-columns: rem(60) auto;
+      column-gap: rem(10);
+
+      &::after {
+        content: counter(custom-counter);
+        position: absolute;
+        top: rem(3);
+        right: rem(3);
+        font-size: rem(70);
+        font-weight: 900;
+        font-style: italic;
+        color: var(--color-grey-100);
+        opacity: 0.08;
+        line-height: 0.71;
+      }
+
+      &-img-inner {
+        overflow: hidden;
+      }
+    }
+
+    &-img {
+      width: 100%;
+      object-fit: cover;
+      transform: scale(var(--onHoverPostCardImageScale));
+      transition: var(--transition-duration);
+      filter: brightness(var(--onHoverPostCardImageBrightness));
+    }
+
+    &-inner {
+      display: grid;
+      row-gap: rem(5);
+    }
+
+    &-title {
+      color: var(--postTitleColorText);
+      font-size: rem(14);
+      line-height: 1.43;
+      transition-duration: var(--transition-duration);
+    }
+
+    &-time {
+      color: var(--postTimeColorText);
+      font-size: rem(12);
+      line-height: 1.25;
+      transition-duration: var(--transition-duration);
+    }
+
+    &-read-more {
+      color: var(--color-grey-100);
+
+      @include hover {
+        color: var(--color-grey-blue-75);
+      }
+    }
+  }
+}

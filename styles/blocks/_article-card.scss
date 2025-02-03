@@ -3,10 +3,10 @@
 .article-card {
   position: relative;
 
-  &-car {
+  &__car {
     grid-area: car;
 
-    &__body {
+    &-body {
       padding-top: rem(15);
       padding-left: rem(35);
       display: flex;
@@ -23,20 +23,20 @@
       }
     }
 
-    &__title {
+    &-title {
       margin-top: rem(20);
     }
 
-    &__description {
+    &-description {
       margin-top: rem(25);
     }
 
-    &__footer {
+    &-footer {
       padding-top: rem(12);
       border-top: var(--border);
     }
 
-    &__comments {
+    &-comments {
       padding-inline: rem(35);
       display: flex;
       align-items: center;
@@ -69,17 +69,17 @@
     }
   }
 
-  &-hand {
+  &__hand {
     grid-area: hand;
 
-    &__overlay {
+    &-overlay {
       padding-top: rem(18);
       padding-right: rem(35);
       padding-bottom: rem(25);
       padding-left: rem(18);
     }
 
-    &__badge {
+    &-badge {
       display: inline-flex;
       padding-block: rem(5);
       padding-inline: rem(12);
@@ -88,7 +88,7 @@
       background-color: var(--color-green);
     }
 
-    &__body {
+    &-body {
       margin-top: rem(117);
       padding-left: rem(7);
 
@@ -101,16 +101,16 @@
       }
     }
 
-    &__title {
+    &-title {
       margin-top: rem(10);
     }
 
-    &__author {
+    &-author {
       margin-top: rem(15);
     }
   }
 
-  &-cat {
+  &__cat {
     grid-area: cat;
 
     @include hover {
@@ -119,14 +119,14 @@
       }
     }
 
-    &__title {
+    &-title {
       padding-top: rem(15);
       padding-bottom: rem(30);
       padding-inline: rem(25);
     }
   }
 
-  &-one {
+  &__one {
     padding-top: rem(25);
     padding-inline: rem(25);
     padding-bottom: rem(30);
@@ -138,51 +138,33 @@
       }
     }
 
-    &__description {
+    &-description {
       margin-top: rem(5);
       margin-bottom: rem(10);
     }
   }
 
-  &-columns {
-    display: flex;
-    flex-direction: column;
+  &__columns {
     grid-area: columns;
-
     background-color: var(--color-grey-blue-75);
-    border-color: var(--color-grey-blue-50);
 
-    &__header {
-      padding-top: rem(20);
-      padding-bottom: rem(19);
-      padding-inline: rem(25);
-      text-transform: uppercase;
+    &-header {
       color: var(--color-white);
-      font-size: rem(14);
-      font-weight: 900;
-      letter-spacing: 0.04em;
-      line-height: 1.43;
-      border-bottom: var(--border);
-      border-color: inherit;
-    }
-
-    &__items {
-      padding-inline: rem(25);
       border-color: var(--color-grey-blue-50);
     }
 
-    &__item {
+    &-item {
       padding-top: rem(45);
       padding-left: rem(10);
 
       &:not(:last-child) {
         padding-bottom: rem(39);
         border-bottom: var(--border);
-        border-color: inherit;
+        border-color: var(--color-grey-blue-50);
       }
     }
 
-    &__link {
+    &-link {
       @include hover {
         .title {
           color: var(--color-grey-blue-50);
@@ -190,26 +172,16 @@
       }
     }
 
-    &__author {
+    &-author {
       margin-top: rem(15);
     }
 
-    &__footer {
-      display: flex;
-      margin-top: auto;
-      border-top: var(--border);
-      border-color: inherit;
+    &-footer {
+      border-color: var(--color-grey-blue-50);
     }
 
-    &__read-more {
-      padding-top: rem(11);
-      padding-bottom: rem(14);
-      width: 100%;
-      text-align: center;
-      font-size: rem(14);
+    &-read-more {
       color: var(--color-white);
-      line-height: 1.43;
-      font-weight: 900;
 
       @include hover {
         color: var(--color-grey-blue-50);
