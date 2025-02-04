@@ -79,15 +79,6 @@
       padding-left: rem(18);
     }
 
-    &-badge {
-      display: inline-flex;
-      padding-block: rem(5);
-      padding-inline: rem(12);
-      border-radius: rem(3);
-      color: var(--color-white);
-      background-color: var(--color-green);
-    }
-
     &-body {
       margin-top: rem(117);
       padding-left: rem(7);
@@ -186,6 +177,124 @@
       @include hover {
         color: var(--color-grey-blue-50);
       }
+    }
+  }
+
+  &__slides {
+    grid-area: slides;
+    position: relative;
+
+    &-inner {
+      display: flex;
+    }
+
+    &-buttons {
+      @include abs-x;
+
+      display: flex;
+      justify-content: space-between;
+      column-gap: rem(17);
+      bottom: rem(46);
+    }
+
+    &-button {
+      position: relative;
+      background-color: var(--color-grey-15);
+      width: rem(8);
+      height: rem(8);
+      border-radius: 50%;
+
+      &::before {
+        @include abs-center;
+
+        content: "";
+        width: 250%;
+        height: 250%;
+      }
+    }
+  }
+
+  &__slide {
+    position: relative;
+    flex: none;
+
+    &-bg-img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &-overlay {
+      padding-top: rem(18);
+      padding-inline: rem(18);
+      padding-bottom: rem(40);
+
+      &-author {
+        margin-top: rem(7);
+      }
+    }
+
+    &-body {
+      margin-top: rem(30);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-title {
+      margin-top: 0;
+      text-align: center;
+      max-width: rem(455);
+    }
+
+    &-link {
+      margin-top: rem(45);
+    }
+  }
+
+  &__woman {
+    grid-area: woman;
+
+    &-body {
+      display: flex;
+      height: 100%;
+      padding-top: rem(35);
+      padding-left: rem(35);
+      padding-bottom: rem(50);
+      background-color: var(--color-grey-blue-50);
+    }
+
+    &-title {
+      margin-top: rem(20);
+      max-width: rem(243);
+    }
+
+    &-description {
+      margin-top: rem(15);
+      max-width: rem(213);
+    }
+
+    &-link {
+      display: inline-flex;
+      margin-top: rem(25);
+      padding-left: rem(25);
+      padding-right: rem(45);
+    }
+
+    &-img {
+      position: absolute;
+      bottom: 0;
+      right: rem(57);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: rem(45);
+      right: rem(30);
+      width: rem(260);
+      height: rem(260);
+      border-radius: 50%;
+      background-color: var(--color-grey-blue-25);
     }
   }
 }

@@ -14,6 +14,10 @@
     --textShadow: 0 0 10px var(--color-grey-100);
   }
 
+  &--col {
+    flex-direction: column;
+  }
+
   &__img {
     border-radius: 50%;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -22,6 +26,11 @@
   &__info {
     display: grid;
     row-gap: rem(2);
+
+    &--center {
+      margin-top: rem(8);
+      justify-items: center;
+    }
   }
 
   &__name {

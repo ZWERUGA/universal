@@ -1,0 +1,19 @@
+@use "../helpers/" as *;
+
+.badge {
+  display: inline-flex;
+  padding-block: rem(5);
+  padding-inline: rem(12);
+  border-radius: rem(3);
+  color: var(--color-white);
+  font-size: rem(12);
+  font-weight: 900;
+
+  &--green {
+    background-color: var(--color-green);
+  }
+
+  &--red {
+    background-color: var(--color-red);
+  }
+}

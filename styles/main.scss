@@ -3,7 +3,6 @@
 // BLOCKS
 @use "./blocks/icon";
 @use "./blocks/author";
-@use "./blocks/button";
 @use "./blocks/category";
 @use "./blocks/header";
 @use "./blocks/burger-button";
@@ -12,10 +11,12 @@
 @use "./blocks/user-actions";
 @use "./blocks/news";
 @use "./blocks/overlay";
+@use "./blocks/button";
 @use "./blocks/tabs";
 @use "./blocks/sidebar";
 @use "./blocks/articles";
 @use "./blocks/grid";
+@use "./blocks/badge";
 @use "./blocks/article-card";
 @use "./blocks/title";
 @use "./blocks/description";

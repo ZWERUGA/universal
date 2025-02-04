@@ -3,18 +3,37 @@
 .articles {
   background-color: var(--color-bg-white);
 
+  &--dark {
+    background-color: var(--color-grey-100);
+  }
+
   &__inner {
     padding-top: rem(15);
     padding-bottom: rem(60);
+
+    &--pb-60 {
+      padding-block: rem(60);
+    }
   }
 
   &__grid {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, rem(170));
-    grid-template-areas:
-      "car car hand columns"
-      "car car hand columns"
-      "cat one one columns"
-      "cat one one columns";
+    &--size-4-4 {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, rem(170));
+      grid-template-areas:
+        "car car hand columns"
+        "car car hand columns"
+        "cat one one columns"
+        "cat one one columns";
+    }
+
+    &--size-3-4 {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, rem(170));
+      grid-template-areas:
+        "slides slides woman woman"
+        "slides slides woman woman"
+        "slides slides one one";
+    }
   }
 }

@@ -3,6 +3,7 @@
 .button {
   --rightArrowValue: #{rem(20)};
   --arrowColor: var(--color-white);
+  --countTextColor: var(--color-grey-blue-40);
 
   padding-block: rem(10);
   position: relative;
@@ -16,9 +17,16 @@
   @include hover {
     --rightArrowValue: #{rem(15)};
     --arrowColor: var(--color-accent);
+    --countTextColor: var(--color-accent);
 
     background-color: var(--color-white);
     color: var(--color-accent);
+    
+  }
+
+  &__count {
+    margin-left: rem(5);
+    color: var(--countTextColor);
   }
 
   &--arrow {
@@ -33,5 +41,25 @@
       right: var(--rightArrowValue);
       transition-duration: var(--transition-duration);
     }
+  }
+
+  &--left-icon {
+    padding-left: rem(50);
+
+    &::before {
+      @include abs-y;
+
+      content: '';
+      mask: url("../../images/icons/images.svg") no-repeat center;
+      background-color: var(--arrowColor);
+      height: rem(20);
+      width: rem(20);
+      left: rem(20);
+      transition-duration: var(--transition-duration);
+    }
+  }
+
+  &--right-count {
+    padding-right: rem(25);
   }
 }
