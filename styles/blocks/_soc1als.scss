@@ -1,0 +1,59 @@
+@use "../helpers/" as *;
+
+.soc1als {
+  --onHoverSvgColor: var(--color-white);
+
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  column-gap: rem(15);
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(40);
+    height: rem(40);
+    border: var(--border);
+    border-color: transparent;
+    border-radius: 50%;
+    transition-duration: var(--transition-duration);
+
+    @include hover {
+      --onHoverSvgColor: var(--color-accent);
+
+      background-color: transparent;
+      border-color: var(--color-accent);
+    }
+
+    &--facebook {
+      background-color: var(--color-bg-facebook);
+    }
+
+    &--twitter {
+      background-color: var(--color-bg-twitter);
+    }
+
+    &--youtube {
+      background-color: var(--color-bg-youtube);
+    }
+
+    &--instagram {
+      background-color: var(--color-bg-instagram);
+    }
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+    svg {
+      path {
+        fill: var(--onHoverSvgColor);
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@use "../helpers/" as *;
+
+.subscribe-form {
+  display: grid;
+  grid-template-columns: rem(313) auto;
+  column-gap: rem(10);
+
+  &__input {
+    padding-block: rem(10);
+    padding-inline: rem(15);
+    width: 100%;
+    border: var(--border);
+    border-radius: rem(5);
+    font-size: rem(14);
+    line-height: 1.43;
+    color: var(--color-grey-100);
+    font-family: var(--font-family-accent);
+
+    &::placeholder {
+      color: var(--color-grey-50);
+    }
+  }
+
+  &__button {
+    padding-inline: rem(29);
+  }
+}

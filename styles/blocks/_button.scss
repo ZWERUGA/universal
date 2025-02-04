@@ -13,6 +13,8 @@
   font-size: rem(14);
   font-weight: 900;
   line-height: 1.43;
+  border: var(--border);
+  border-color: transparent;
 
   @include hover {
     --rightArrowValue: #{rem(15)};
@@ -21,7 +23,12 @@
 
     background-color: var(--color-white);
     color: var(--color-accent);
-    
+  }
+
+  &--alt {
+    @include hover {
+      border-color: var(--color-accent);
+    }
   }
 
   &__count {
@@ -49,7 +56,7 @@
     &::before {
       @include abs-y;
 
-      content: '';
+      content: "";
       mask: url("../../images/icons/images.svg") no-repeat center;
       background-color: var(--arrowColor);
       height: rem(20);
