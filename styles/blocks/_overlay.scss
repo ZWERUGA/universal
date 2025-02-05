@@ -6,7 +6,9 @@
   background-color: rgba(64, 48, 61, 0.35);
   opacity: 1;
   visibility: visible;
-  transition-duration: 1s;
+  transition: opacity 1s linear;
+  display: flex;
+  flex-direction: column;
 
   &--is-hidden {
     opacity: 0;
@@ -26,6 +28,10 @@
     font-weight: 700;
     color: var(--color-white);
     line-height: 1.25;
+
+    @include laptop {
+      font-size: fluid(40, 24, 1000, 320);
+    }
   }
 
   &__link {
@@ -38,6 +44,13 @@
     display: flex;
     align-items: center;
     column-gap: rem(30);
+
+    @include mobile {
+      margin-top: auto;
+      align-items: start;
+      flex-direction: column;
+      row-gap: rem(20);
+    }
 
     &-play-video {
       --colorAccent: var(--color-white);
