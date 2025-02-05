@@ -3,16 +3,15 @@
 .form {
   display: flex;
   align-items: center;
-  column-gap: rem(11);
   height: 100%;
 
   &__input {
     padding-block: rem(10);
-    padding-left: rem(55);
+    padding-left: rem(35);
     padding-right: rem(10);
     width: 100%;
     background-image: url("../../images/icons/search.svg");
-    background-position: rem(25) center;
+    background-position: rem(10) center;
     background-repeat: no-repeat;
     font-family: var(--font-family-base);
   }

@@ -9,13 +9,21 @@
     display: grid;
     grid-template-columns: rem(114) auto rem(292);
     align-items: center;
+    min-height: rem(52);
     border-bottom: var(--border);
+
+    @include tablet {
+      grid-template-columns: rem(114) auto;
+    }
+
+    @include mobile {
+      grid-template-columns: rem(30) auto;
+    }
   }
 
   &__burger-button {
     position: relative;
     padding-block: rem(10);
-    padding-right: rem(25);
 
     &::after {
       content: "";
@@ -26,6 +34,24 @@
       width: rem(1);
       border-right: var(--border);
     }
+
+    @include tablet {
+      padding-right: fluid(25, 10, 768, 600);
+    }
+  }
+
+  &__form {
+    padding-inline: rem(5);
+
+    @include tablet {
+      padding-right: 0;
+    }
+
+    @include mobile {
+      padding-left: 0;
+      max-height: rem(37);
+      border-bottom: var(--border);
+    }
   }
 
   &__actions {
@@ -33,16 +59,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    column-gap: rem(25);
     height: 100%;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__body {
-    padding-left: rem(28);
+    padding-left: fluid(28, 0, 1160, 1000);
     min-height: rem(84);
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    justify-content: space-between;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      min-height: rem(50);
+    }
   }
 
   &__hot {
@@ -50,14 +84,41 @@
     align-items: center;
 
     &-text {
-      margin-left: rem(15);
+      margin-left: fluid(15, 0, 1160, 1000);
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__logo {
+    justify-self: center;
+
+    @include mobile {
+      max-width: rem(138);
     }
   }
 
   &__info {
     display: flex;
     align-items: center;
-    column-gap: rem(67);
+    column-gap: fluid(67, 20, 1000, 768);
+    justify-self: end;
+
+    @include tablet {
+      display: grid;
+      justify-items: end;
+      row-gap: rem(6);
+    }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__temperature {
@@ -71,11 +132,23 @@
     position: relative;
     background-color: var(--color-grey-100);
     padding-block: rem(18);
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
+
+    @include laptop {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: rem(46);
+      row-gap: rem(20);
+      justify-content: center;
+    }
   }
 
   &__link {
@@ -91,7 +164,7 @@
     &::before {
       @include abs-center;
 
-      content: '';
+      content: "";
 
       width: 100%;
       height: 200%;

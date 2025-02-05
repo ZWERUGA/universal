@@ -9,3 +9,15 @@
 .visually-hidden {
   @include visually-hidden;
 }
+
+.mobile-hidden {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+.mobile-visible {
+  @include mobile-above {
+    display: none !important;
+  }
+}

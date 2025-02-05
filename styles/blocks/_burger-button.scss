@@ -29,4 +29,10 @@
       width: rem(12);
     }
   }
+
+  &__text {
+    @include mobile {
+      display: none;
+    }
+  }
 }

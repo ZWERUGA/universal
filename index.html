@@ -17,9 +17,9 @@
               <span class="burger-button__line burger-button__line--small"></span>
               <span class="burger-button__line"></span>
             </div>
-            Sections
+            <span class="burger-button__text">Sections</span>
           </button>
-          <form class="header__form form" id="search" role="search">
+          <form class="header__form form mobile-hidden" id="search" role="search">
             <input
               class="form__input"
               type="search"
@@ -29,6 +29,16 @@
               aria-label="Search"
             />
           </form>
+          <a href="#" class="header__logo logo mobile-visible">
+            <img
+              src="./images/header/logo.svg"
+              alt=""
+              class="logo__img"
+              width="184"
+              height="31"
+              loading="lazy"
+            />
+          </a>
           <div class="header__actions">
             <div class="header__subscribe subscribe">
               <a href="#" class="subscribe__inner"
@@ -69,6 +79,16 @@
           </div>
         </div>
         <div class="header__body">
+          <form class="header__form form mobile-visible" id="search" role="search">
+            <input
+              class="form__input"
+              type="search"
+              id="search-input"
+              name="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
           <div class="header__hot">
             <img
               src="./images/header/1.svg"
@@ -80,7 +100,7 @@
             />
             <div class="header__hot-text">Boston and New York Bear Brunt</div>
           </div>
-          <a href="#" class="header__logo logo">
+          <a href="#" class="header__logo logo mobile-hidden">
             <img
               src="./images/header/logo.svg"
               alt=""
@@ -147,7 +167,7 @@
       </div>
     </header>
 
-    <main class="content">
+    <!-- <main class="content">
       <section class="news">
         <div class="news__inner container">
           <div class="news__latest">
@@ -1339,13 +1359,13 @@
           </div>
         </div>
       </section>
-    </main>
+    </main> -->
 
-    <footer class="footer container">
+    <!-- <footer class="footer container">
       <div class="footer__subscribe">
         <h2 class="footer__subscribe-title">Subscribe now and get 20% off</h2>
         <form class="footer__subscribe-form subscribe-form">
-          <input type="email" placeholder="Enter your email" class="subscribe-form__input">
+          <input type="email" placeholder="Enter your email" class="subscribe-form__input" required>
           <button class="subscribe-form__button button button--alt" type="submit">Subscribe</button>
       </div>
       <div class="footer__navigation">
@@ -1552,6 +1572,6 @@
         <div class="footer__extra-description">Universal’s business concept is to offer fashion and quality at the best price in a sustainable way. Universal has since it was founded in 2015 grown into one of the world's leading fashion companies.</div>
         <div class="footer__extra-copyright">© <time datetime="2025">2025</time> Universal UI Kit</div>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>

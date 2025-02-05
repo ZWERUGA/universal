@@ -1,7 +1,60 @@
 @use "./functions" as *;
 
+$desktop: 1160.98;
+$laptop: 1000.98;
+$tablet: 768.98;
+$mobile: 600.98;
+
+@mixin desktop-above {
+  @media (width > rem($desktop)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (width <= rem($desktop)) {
+    @content;
+  }
+}
+
+@mixin laptop-above {
+  @media (width > rem($laptop)) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (width <= rem($laptop)) {
+    @content;
+  }
+}
+
+@mixin tablet-above {
+  @media (width > rem($tablet)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (width <= rem($tablet)) {
+    @content;
+  }
+}
+
+@mixin mobile-above {
+  @media (width > rem($mobile)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (width <= rem($mobile)) {
+    @content;
+  }
+}
+
 @mixin hover {
-  @media (hover: hover) {
+  @media (any-hover: hover) {
     &:hover {
       @content;
     }
