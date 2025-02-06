@@ -8,10 +8,10 @@
     <script src="./scripts/main.js" type="module"></script>
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="header__inner container">
         <div class="header__top">
-          <button class="header__burger-button burger-button" type="button">
+          <button class="header__burger-button burger-button" type="button" data-js-burger-button>
             <div class="burger-button__lines">
               <span class="burger-button__line"></span>
               <span class="burger-button__line burger-button__line--small"></span>
@@ -165,10 +165,10 @@
           </li>
         </ul>
       </div>
-    </header> -->
+    </header>
 
     <main class="content">
-      <!-- <section class="news">
+      <section class="news" id="news">
         <div class="news__inner container">
           <div class="news__latest">
             <ul class="news__latest-list">
@@ -493,9 +493,9 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
-      <!-- <section class="articles">
+      <section class="articles" id="latest">
         <div class="articles__inner container">
           <div class="articles__grid articles__grid--size-4-4 grid">
             <div class="grid__item article-card article-card__car">
@@ -718,16 +718,16 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
-      <!-- <section class="banner">
+      <section class="banner">
         <div class="banner__inner container">
           <h2 class="banner__title">The Big Bloom or «How Flowering Plants Changed the World»</h2>
           <a href="#" class="banner__link button button--arrow">Read more</a>
         </div>
-      </section> -->
+      </section>
 
-      <!-- <section class="posts">
+      <section class="posts" id="posts">
         <div class="posts__inner container">
           <div class="posts__main">
             <ul class="posts__main-list" data-js-posts-main-list>
@@ -1094,9 +1094,9 @@
             </footer>
           </div>
         </div>
-      </section> -->
+      </section>
 
-      <!-- <section class="articles articles--dark">
+      <section class="articles articles--dark" id="past">
         <div class="articles__inner articles__inner--pb-60 container">
           <div class="articles__grid articles__grid--size-3-4 grid">
             <div class="grid__item article-card article-card__slides">
@@ -1135,7 +1135,7 @@
                         Readers' Choice winners: Your wine country favorites
                       </h2>
                       <a
-                        href=""
+                        href="#"
                         class="article-card__slide-link overlay__link button button--left-icon button--right-count"
                         >Watch photos <span class="button__count">26</span></a
                       >
@@ -1176,7 +1176,7 @@
                         Readers' Choice winners: Your wine country favorites
                       </h2>
                       <a
-                        href=""
+                        href="#"
                         class="article-card__slide-link overlay__link button button--left-icon button--right-count"
                         >Watch photos <span class="button__count">26</span></a
                       >
@@ -1217,7 +1217,7 @@
                         Readers' Choice winners: Your wine country favorites
                       </h2>
                       <a
-                        href=""
+                        href="#"
                         class="article-card__slide-link overlay__link button button--left-icon button--right-count"
                         >Watch photos <span class="button__count">26</span></a
                       >
@@ -1258,7 +1258,7 @@
                         Readers' Choice winners: Your wine country favorites
                       </h2>
                       <a
-                        href=""
+                        href="#"
                         class="article-card__slide-link overlay__link button button--left-icon button--right-count"
                         >Watch photos <span class="button__count">26</span></a
                       >
@@ -1299,7 +1299,7 @@
                         Readers' Choice winners: Your wine country favorites
                       </h2>
                       <a
-                        href=""
+                        href="#"
                         class="article-card__slide-link overlay__link button button--left-icon button--right-count"
                         >Watch photos <span class="button__count">26</span></a
                       >
@@ -1366,10 +1366,10 @@
             </a>
           </div>
         </div>
-      </section> -->
+      </section>
     </main>
 
-    <footer class="footer container">
+    <footer class="footer container" id="menu">
       <div class="footer__subscribe">
         <h2 class="footer__subscribe-title">Subscribe now and get 20% off</h2>
         <form class="footer__subscribe-form subscribe-form">
@@ -1581,5 +1581,73 @@
         <div class="footer__extra-copyright">© <time datetime="2025">2025</time> Universal UI Kit</div>
       </div>
     </footer>
+
+    <div class="modal-overlay" data-js-modal-overlay-menu>
+      <div class="modal-overlay__inner container" data-js-modal-overlay-inner>
+        <div class="modal-overlay__close" data-js-modal-overlay-close>
+          <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z" fill="#ffffff"/></svg>
+        </div>
+
+        <figure class="modal-overlay__box">
+          <figcaption class="modal-overlay__title">Main sections</figcaption>
+          <ul class="modal-overlay__list">
+            <li class="modal-overlay__item">
+              <a href="#news" class="modal-overlay__link">News</a>
+            </li>
+            <li class="modal-overlay__item">
+              <a href="#latest" class="modal-overlay__link">Latest articles</a>
+            </li>
+            <li class="modal-overlay__item">
+              <a href="#posts" class="modal-overlay__link">Posts</a>
+            </li>
+            <li class="modal-overlay__item">
+              <a href="#past" class="modal-overlay__link">Past articles</a>
+            </li>
+            <li class="modal-overlay__item">
+              <a href="#menu" class="modal-overlay__link">Menu</a>
+            </li>
+          </ul>
+        </figure>
+
+        <figure class="modal-overlay__box">
+          <figcaption class="modal-overlay__title">Categories</figcaption>
+          <ul class="modal-overlay__list">
+            <li class="modal-overlay__item">
+              <a href="#" class="modal-overlay__link">News</a>
+            </li>
+            <li class="modal-overlay__item">
+              <a href="#" class="modal-overlay__link">Opinion</a>
+            </li>
+            <li class="modal-overlay__item">
+              <a href="#" class="modal-overlay__link">Science</a>
+            </li>
+            <li class="modal-overlay__item">
+              <a href="#" class="modal-overlay__link">Life</a>
+            </li>
+            <li class="modal-overlay__item">
+              <a href="#" class="modal-overlay__link">Travel</a>
+            </li>
+            <li class="modal-overlay__item">
+              <a href="#" class="modal-overlay__link">Moneys</a>
+            </li>
+            <li class="modal-overlay__item">
+              <a href="#" class="modal-overlay__link">Art & Design</a>
+            </li>
+            <li class="modal-overlay__item">
+              <a href="#" class="modal-overlay__link">Sports</a>
+            </li>
+            <li class="modal-overlay__item">
+              <a href="#" class="modal-overlay__link">People</a>
+            </li>
+            <li class="modal-overlay__item">
+              <a href="#" class="modal-overlay__link">Health</a>
+            </li>
+            <li class="modal-overlay__item">
+              <a href="#" class="modal-overlay__link">Education</a>
+            </li>
+          </ul>
+        </figure>
+      </div>
+    </div>
   </body>
 </html>

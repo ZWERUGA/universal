@@ -1,13 +1,8 @@
 @use "../helpers/" as *;
 
 .footer {
-  padding-top: rem(60);
-  padding-bottom: rem(55);
-
-  @include mobile {
-    padding-top: fluid(60, 30, 600, 320);
-    padding-bottom: fluid(55, 30, 600, 320);
-  }
+  padding-top: fluid(60, 30, 1160, 320);
+  padding-bottom: fluid(55, 30, 1160, 320);
 
   &__subscribe {
     display: flex;
@@ -36,7 +31,7 @@
   }
 
   &__navigation {
-    margin-top: rem(70);
+    margin-top: fluid(70, 30, 1160, 320);
     display: grid;
     grid-template-columns: repeat(6, 1fr);
 
@@ -47,7 +42,6 @@
     }
 
     @include mobile {
-      margin-top: fluid(70, 30, 600, 320);
       grid-template-columns: repeat(2, fluid(195, 150, 600, 320));
     }
   }
@@ -117,7 +111,7 @@
   }
 
   &__contacts {
-    margin-top: rem(64);
+    margin-top: fluid(64, 30, 1160, 320);
     padding-block: rem(30);
     display: flex;
     column-gap: rem(30);
@@ -128,10 +122,6 @@
       justify-content: center;
       justify-items: center;
       row-gap: rem(20);
-    }
-
-    @include mobile {
-      margin-top: fluid(64, 30, 600, 320);
     }
 
     &-list {
@@ -171,7 +161,7 @@
   }
 
   &__extra {
-    margin-top: rem(40);
+    margin-top: fluid(40, 30, 1160, 320);
     display: flex;
     justify-content: space-between;
     font-size: rem(14);
@@ -183,10 +173,6 @@
       justify-content: center;
       justify-items: center;
       row-gap: rem(20);
-    }
-
-    @include mobile {
-      margin-top: fluid(40, 30, 600, 320);
     }
 
     &-description {

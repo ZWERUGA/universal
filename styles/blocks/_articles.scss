@@ -9,10 +9,10 @@
 
   &__inner {
     padding-top: rem(15);
-    padding-bottom: rem(60);
+    padding-bottom: fluid(60, 30, 1160, 320);
 
     &--pb-60 {
-      padding-block: rem(60);
+      padding-block: fluid(60, 30, 1160, 320);
     }
   }
 

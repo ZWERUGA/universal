@@ -4,7 +4,7 @@
   background-color: var(--color-bg-white);
 
   &__inner {
-    padding-block: rem(60);
+    padding-block: fluid(60, 30, 1160, 320);
     display: grid;
     grid-template-columns: auto rem(263);
     column-gap: rem(30);
