@@ -8,6 +8,15 @@
     display: grid;
     grid-template-columns: auto rem(263);
     column-gap: rem(30);
+
+    @include desktop {
+      column-gap: rem(10);
+    }
+
+    @include laptop {
+      grid-template-columns: 1fr;
+      row-gap: rem(10);
+    }
   }
 
   &__main {
@@ -17,11 +26,37 @@
 
     &-list {
       padding-inline: rem(25);
+
+      @include laptop {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: rem(20);
+      }
+
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
     }
 
     &-item {
       &:not(:last-child) {
         border-bottom: var(--border);
+      }
+
+      @include laptop {
+        &:not(:last-child) {
+          border-bottom: none;
+        }
+
+        &:not(:nth-last-child(-n + 2)) {
+          border-bottom: var(--border);
+        }
+      }
+
+      @include mobile {
+        &:not(:last-child) {
+          border-bottom: var(--border);
+        }
       }
     }
   }
