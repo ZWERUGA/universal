@@ -8,6 +8,10 @@
   align-items: center;
   column-gap: rem(15);
 
+  @include laptop {
+    margin-left: unset;
+  }
+
   &-item {
     display: flex;
     align-items: center;

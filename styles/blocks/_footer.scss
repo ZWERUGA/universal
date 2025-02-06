@@ -4,6 +4,11 @@
   padding-top: rem(60);
   padding-bottom: rem(55);
 
+  @include mobile {
+    padding-top: fluid(60, 30, 600, 320);
+    padding-bottom: fluid(55, 30, 600, 320);
+  }
+
   &__subscribe {
     display: flex;
     flex-direction: column;
@@ -14,11 +19,19 @@
       font-size: rem(40);
       font-weight: 700;
       line-height: 1.25;
+
+      @include mobile {
+        font-size: rem(20);
+      }
     }
 
     &-form {
       margin-top: rem(25);
       max-width: rem(442);
+
+      @include mobile {
+        width: 100%;
+      }
     }
   }
 
@@ -26,6 +39,17 @@
     margin-top: rem(70);
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+
+    @include laptop {
+      justify-content: center;
+      grid-template-columns: repeat(3, rem(195));
+      row-gap: rem(40);
+    }
+
+    @include mobile {
+      margin-top: fluid(70, 30, 600, 320);
+      grid-template-columns: repeat(2, fluid(195, 150, 600, 320));
+    }
   }
 
   &__list {
@@ -99,10 +123,28 @@
     column-gap: rem(30);
     border-block: var(--border);
 
+    @include laptop {
+      display: grid;
+      justify-content: center;
+      justify-items: center;
+      row-gap: rem(20);
+    }
+
+    @include mobile {
+      margin-top: fluid(64, 30, 600, 320);
+    }
+
     &-list {
       display: flex;
       align-items: center;
       column-gap: rem(30);
+
+      @include mobile {
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        row-gap: rem(20);
+      }
     }
 
     &-link {
@@ -126,10 +168,6 @@
         height: 250%;
       }
     }
-
-    &-soc1als {
-      justify-self: end;
-    }
   }
 
   &__extra {
@@ -140,8 +178,23 @@
     line-height: 1.43;
     color: var(--color-grey-50);
 
+    @include laptop {
+      display: grid;
+      justify-content: center;
+      justify-items: center;
+      row-gap: rem(20);
+    }
+
+    @include mobile {
+      margin-top: fluid(40, 30, 600, 320);
+    }
+
     &-description {
       max-width: rem(750);
+
+      @include laptop {
+        text-align: center;
+      }
     }
   }
 }

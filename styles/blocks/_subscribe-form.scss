@@ -5,6 +5,11 @@
   grid-template-columns: rem(313) auto;
   column-gap: rem(10);
 
+  @include mobile {
+    grid-template-columns: 1fr;
+    row-gap: rem(10);
+  }
+
   &__input {
     padding-block: rem(10);
     padding-inline: rem(15);
@@ -23,5 +28,6 @@
 
   &__button {
     padding-inline: rem(29);
+    justify-self: center;
   }
 }
