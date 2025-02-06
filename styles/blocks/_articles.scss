@@ -55,18 +55,18 @@
       @include mobile {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        grid-template-areas: 
-          'car'
-          'hand'
-          'cat'
-          'one'
-          'one'
-          'one'
-          'one'
-          'columns'
-          'columns'
-          'columns'
-          'columns';
+        grid-template-areas:
+          "car"
+          "hand"
+          "cat"
+          "one"
+          "one"
+          "one"
+          "one"
+          "columns"
+          "columns"
+          "columns"
+          "columns";
       }
     }
 
@@ -77,6 +77,32 @@
         "slides slides woman woman"
         "slides slides woman woman"
         "slides slides one one";
+
+      @include desktop {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, rem(170));
+        grid-template-areas:
+          "slides slides"
+          "slides slides"
+          "slides slides"
+          "woman woman"
+          "woman woman"
+          "one one";
+      }
+
+      @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-rows: rem(510) auto repeat(2, auto);
+        grid-template-areas:
+          "slides"
+          "woman"
+          "one"
+          "one";
+      }
+
+      @include mobile-s {
+        grid-template-rows: rem(510) rem(680) repeat(2, auto);
+      }
     }
   }
 }

@@ -242,6 +242,8 @@
 
     &-inner {
       display: flex;
+      width: 100%;
+      height: 100%;
     }
 
     &-buttons {
@@ -274,9 +276,17 @@
     position: relative;
     flex: none;
 
+    @include desktop {
+      width: 100%;
+    }
+
     &-bg-img {
       width: 100%;
       object-fit: cover;
+
+      @include mobile {
+        height: rem(570);
+      }
     }
 
     &-overlay {
@@ -317,6 +327,15 @@
       padding-left: rem(35);
       padding-bottom: rem(50);
       background-color: var(--color-grey-blue-50);
+
+      @include mobile {
+        display: grid;
+      }
+
+      @include mobile-s {
+        padding-left: fluid(35, 10, 530, 320);
+        padding-top: fluid(35, 10, 530, 320);
+      }
     }
 
     &-title {
@@ -340,6 +359,10 @@
       position: absolute;
       bottom: 0;
       right: rem(57);
+
+      @include mobile {
+        right: rem(25);
+      }
     }
 
     &::before {
@@ -351,6 +374,10 @@
       height: rem(260);
       border-radius: 50%;
       background-color: var(--color-grey-blue-25);
+
+      @include mobile {
+        right: rem(-3);
+      }
     }
   }
 }
