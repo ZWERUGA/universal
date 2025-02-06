@@ -7,13 +7,17 @@
   opacity: 1;
   visibility: visible;
   transition: opacity 1s linear;
-  display: flex;
-  flex-direction: column;
+  display: grid;
 
   &--is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+  }
+
+  &__badge {
+    align-self: start;
+    justify-self: start;
   }
 
   &__category {

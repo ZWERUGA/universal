@@ -11,6 +11,12 @@
       padding-left: rem(35);
       display: flex;
 
+      @include mobile {
+        display: grid;
+        padding-left: rem(10);
+        padding-top: rem(10);
+      }
+
       @include hover {
         .title,
         .description {
@@ -20,6 +26,10 @@
 
       &-content {
         padding-top: rem(20);
+
+        @include mobile {
+          padding-right: rem(10);
+        }
       }
     }
 
@@ -31,15 +41,27 @@
       margin-top: rem(25);
     }
 
+    &-img {
+      justify-self: end;
+    }
+
     &-footer {
       padding-top: rem(12);
       border-top: var(--border);
+
+      @include mobile {
+        padding-block: rem(10);
+      }
     }
 
     &-comments {
       padding-inline: rem(35);
       display: flex;
       align-items: center;
+
+      @include mobile {
+        padding-inline: rem(10);
+      }
 
       &-author {
         &-name {
@@ -49,6 +71,10 @@
           font-weight: 900;
           line-height: 1.43;
           color: var(--color-grey-100);
+
+          @include mobile {
+            display: none;
+          }
         }
 
         &-comment {
@@ -79,6 +105,21 @@
       padding-left: rem(18);
     }
 
+    &-bg-img {
+      width: 100%;
+      object-fit: cover;
+
+      @include mobile {
+        height: rem(370);
+      }
+    }
+
+    &-badge {
+      display: grid;
+      justify-self: start;
+      align-self: start;
+    }
+
     &-body {
       margin-top: rem(117);
       padding-left: rem(7);
@@ -103,6 +144,15 @@
 
   &__cat {
     grid-area: cat;
+
+    &-bg-img {
+      width: 100%;
+      object-fit: cover;
+
+      @include mobile {
+        height: rem(370);
+      }
+    }
 
     @include hover {
       .title {
@@ -152,6 +202,12 @@
         padding-bottom: rem(39);
         border-bottom: var(--border);
         border-color: var(--color-grey-blue-50);
+      }
+
+      @include mobile {
+        &:last-child {
+          padding-bottom: rem(39);
+        }
       }
     }
 

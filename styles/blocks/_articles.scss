@@ -25,6 +25,49 @@
         "car car hand columns"
         "cat one one columns"
         "cat one one columns";
+
+      @include desktop {
+        justify-content: center;
+        grid-template-columns: repeat(3, rem(263));
+        grid-template-rows: repeat(5, rem(170));
+        grid-template-areas:
+          "car car columns"
+          "car car columns"
+          "cat hand columns"
+          "cat hand columns"
+          "one one one";
+      }
+
+      @include laptop-s {
+        grid-template-columns: repeat(2, rem(263));
+        grid-template-rows: repeat(8, rem(170));
+        grid-template-areas:
+          "car car"
+          "car car"
+          "cat hand"
+          "cat hand"
+          "one columns"
+          "one columns"
+          "one columns"
+          "one columns";
+      }
+
+      @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          'car'
+          'hand'
+          'cat'
+          'one'
+          'one'
+          'one'
+          'one'
+          'columns'
+          'columns'
+          'columns'
+          'columns';
+      }
     }
 
     &--size-3-4 {
