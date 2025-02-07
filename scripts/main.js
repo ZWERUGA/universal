@@ -1,7 +1,9 @@
 import Tabs from "./Tabs.js";
 import VideosCollection from "./Videos.js";
-import ModalOverlay from "./ModalOverlay.js";
+import ModalOverlayMenu from "./ModalOverlayMenu.js";
+import ModalOverlayThanks from "./ModalOverlayThanks.js";
 
 new Tabs();
 new VideosCollection();
-new ModalOverlay();
+new ModalOverlayMenu();
+new ModalOverlayThanks();

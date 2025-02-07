@@ -26,8 +26,37 @@
   }
 
   &--alt {
+    width: rem(122);
+
     @include hover {
       border-color: var(--color-accent);
+
+      svg {
+        * {
+          fill: var(--color-accent);
+          stroke: var(--color-accent);
+        }
+      }
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  &--is-loading {
+    span {
+      display: none;
+    }
+
+    svg {
+      display: block;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
     }
   }
 

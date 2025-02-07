@@ -1374,7 +1374,10 @@
         <h2 class="footer__subscribe-title">Subscribe now and get 20% off</h2>
         <form class="footer__subscribe-form subscribe-form">
           <input type="email" placeholder="Enter your email" class="subscribe-form__input" required>
-          <button class="subscribe-form__button button button--alt" type="submit">Subscribe</button>
+          <button class="subscribe-form__button button button--alt" type="submit">
+            <span>Subscribe</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="#ffffff" stroke="#ffffff" stroke-width="15" r="15" cx="40" cy="100"><animate attributeName="opacity" calcMode="spline" dur="2" values="1;0;1;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="#ffffff" stroke="#ffffff" stroke-width="15" r="15" cx="100" cy="100"><animate attributeName="opacity" calcMode="spline" dur="2" values="1;0;1;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="#ffffff" stroke="#ffffff" stroke-width="15" r="15" cx="160" cy="100"><animate attributeName="opacity" calcMode="spline" dur="2" values="1;0;1;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg>
+          </button>
       </div>
       <div class="footer__navigation">
         <figure class="footer__list-box footer__list-box--red">
@@ -1583,7 +1586,7 @@
     </footer>
 
     <div class="modal-overlay" data-js-modal-overlay-menu>
-      <div class="modal-overlay__inner container" data-js-modal-overlay-inner>
+      <div class="modal-overlay__inner-menu container" data-js-modal-overlay-inner-menu>
         <div class="modal-overlay__close" data-js-modal-overlay-close>
           <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z" fill="#ffffff"/></svg>
         </div>
@@ -1647,6 +1650,36 @@
             </li>
           </ul>
         </figure>
+      </div>
+
+      <div class="modal-overlay__inner-thanks" data-js-modal-overlay-inner-thanks>
+        <div class="modal-overlay__header">
+          <h2 class="modal-overlay__title">Universal Team</h2>
+          <div class="modal-overlay__close" data-js-modal-overlay-close>
+            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z" fill="#ffffff"/></svg>
+          </div>
+        </div>
+        <div class="modal-overlay__body">
+          <p>
+            Thanks for joining us!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" data-js-modal-overlay-thanks>
+      <div class="modal-overlay__inner-thanks" data-js-modal-overlay-inner-thanks>
+        <div class="modal-overlay__header">
+          <h2 class="modal-overlay__header-title">Universal Team</h2>
+          <div class="modal-overlay__close" data-js-modal-overlay-close>
+            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.207 6.207a1 1 0 0 0-1.414-1.414L12 10.586 6.207 4.793a1 1 0 0 0-1.414 1.414L10.586 12l-5.793 5.793a1 1 0 1 0 1.414 1.414L12 13.414l5.793 5.793a1 1 0 0 0 1.414-1.414L13.414 12l5.793-5.793z" fill="#ffffff"/></svg>
+          </div>
+        </div>
+        <div class="modal-overlay__body">
+          <p>
+            Thanks for joining us!
+          </p>
+        </div>
       </div>
     </div>
   </body>
