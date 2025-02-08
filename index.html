@@ -1099,8 +1099,9 @@
       <section class="articles articles--dark" id="past">
         <div class="articles__inner articles__inner--pb-60 container">
           <div class="articles__grid articles__grid--size-3-4 grid">
-            <div class="grid__item article-card article-card__slides">
-              <div class="article-card__slides-inner">
+            
+            <div class="grid__item article-card article-card__slides" data-js-slides-container>
+              <div class="article-card__slides-inner" data-js-slides-inner>
                 <div class="article-card__slide" id="article-slide-1">
                   <img
                     class="article-card__slide-bg-img"
@@ -1308,12 +1309,36 @@
                 </div>
               </div>
 
-              <div class="article-card__slides-buttons">
-                <button class="article-card__slides-button" type="button"></button>
-                <button class="article-card__slides-button is-active" type="button"></button>
-                <button class="article-card__slides-button" type="button"></button>
-                <button class="article-card__slides-button" type="button"></button>
-                <button class="article-card__slides-button" type="button"></button>
+              <div class="article-card__slides-buttons" data-js-slides-buttons>
+                <button class="article-card__slides-button" type="button" data-js-slides-button>
+                  <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="10" r="4" fill="#d9dadb" />
+                    <circle class="animated-ring" cx="10" cy="10" r="9" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="56.52, 56.52" stroke-dashoffset="56.52">
+                      <animate attributeName="stroke-dashoffset" from="56.52" to="0" dur="5s" repeatCount="1" />
+                    </circle>
+                  </svg>
+                </button>
+                <button class="article-card__slides-button" type="button" data-js-slides-button>
+                  <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="10" r="4" fill="#d9dadb" />
+                  </svg>
+                </button>
+                <button class="article-card__slides-button" type="button" data-js-slides-button>
+                  <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="10" r="4" fill="#d9dadb" />
+                  </svg>
+                </button>
+                <button class="article-card__slides-button" type="button" data-js-slides-button>
+                  <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="10" r="4" fill="#d9dadb" />
+                  </svg>
+                </button>
+                <button class="article-card__slides-button" type="button" data-js-slides-button>
+                  <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="10" r="4" fill="#d9dadb" />
+                  </svg>
+                </button>
+                
               </div>
             </div>
 
