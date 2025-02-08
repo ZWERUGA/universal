@@ -48,32 +48,74 @@
 
   &__list {
     &-box {
+      position: relative;
       padding-top: rem(30);
       border-top: var(--border);
       border-width: rem(5);
 
+      &::before {
+        @include abs-x;
+
+        content: "";
+        top: 0;
+        width: 100%;
+        height: rem(0);
+        background-color: transparent;
+        transition-duration: var(--transition-duration);
+      }
+
+      @include hover {
+        &::before {
+          height: rem(5);
+        }
+      }
+
       &--red {
         border-color: var(--color-red);
+
+        &::before {
+          background-color: var(--color-red);
+        }
       }
 
       &--purple {
         border-color: var(--color-purple);
+
+        &::before {
+          background-color: var(--color-purple);
+        }
       }
 
       &--accent {
         border-color: var(--color-accent);
+
+        &::before {
+          background-color: var(--color-accent);
+        }
       }
 
       &--orange {
         border-color: var(--color-orange);
+
+        &::before {
+          background-color: var(--color-orange);
+        }
       }
 
       &--green {
         border-color: var(--color-green);
+
+        &::before {
+          background-color: var(--color-green);
+        }
       }
 
       &--grey-blue-75 {
         border-color: var(--color-grey-blue-75);
+
+        &::before {
+          background-color: var(--color-grey-blue-75);
+        }
       }
     }
 

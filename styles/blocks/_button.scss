@@ -27,6 +27,7 @@
 
   &--alt {
     width: rem(122);
+    height: rem(42);
 
     @include hover {
       border-color: var(--color-accent);
